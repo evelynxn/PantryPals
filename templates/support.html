@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Pantry Pal</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='pantryPals.css') }}">
+        <link rel="icon" type="image/png" href="{{ url_for('static', filename='PantryPalLogo.png') }}">
+    </head>
+    <body>
+        <header>
+            <div class="nav">
+                <a href="{{ url_for('home') }}">
+                    <img src="{{ url_for('static', filename='PantryPalLogo.png') }}" style="width:150px; height:150px;" alt="Pantry Pal Logo">
+                </a>
+
+                <!-- make home into a quick link to the homepage -->
+                <div class="pages">
+                    <a href="{{ url_for('chat') }}">Chat</a>
+                    <a href="{{ url_for('recipe_book') }}">Recipe Book</a>
+                    <a href="{{ url_for('recommendations') }}">Recommendations</a>
+                    <a href="{{ url_for('support') }}">Contact</a>
+                </div>
+            </div>
+        </header>
+        <div>
+            <h1 style="text-align: center;">Contact Us</h1>
+            <div class="contact">
+                <h2>Phone Number</h2>
+                <p>(123) 456 7890</p>
+                <h2>Email Address</h2>
+                <p>pantrypal@gmail.com</p>
+                <h2>Location</h2>
+                <p>Guelph, Ontario</p>
+            </div>
+        </div>
+    </body>
+</html>

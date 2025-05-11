@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Pantry Pal</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='pantryPals.css') }}">
+        <link rel="icon" type="image/png" href="{{ url_for('static', filename='PantryPalLogo.png') }}">
+    </head>
+    <body>
+        <header>
+
+            <div class="nav">
+                <a href="{{ url_for('home') }}">
+                    <img src="{{ url_for('static', filename='PantryPalLogo.png') }}" style="width:150px; height:150px;" alt="Pantry Pal Logo">
+                </a>
+
+                <!-- make home into a quick link to the homepage -->
+                <div class="pages">
+                    <a href="{{ url_for('chat') }}">Chat</a>
+                    <a href="{{ url_for('recipe_book') }}">Recipe Book</a>
+                    <a href="{{ url_for('recommendations') }}">Recommendations</a>
+                    <a href="{{ url_for('support') }}">Contact</a>
+                </div>
+
+            </div>
+        </header>
+        <body>
+
+        <div class="interface">
+            <div class="userInput">
+                <form method="post" action="/generate">
+                    <label for="ingredients">Enter ingredients (comma-separated):</label><br>
+                    <input type="text" id="ingredients" name="ingredients" required>
+                    <button type="submit">Generate Recipe</button>
+                </form>
+            </div>
+
+            <div class="chatBox" id="output">
+                <h2>🍽️ Your Recipe:</h2>
+                <!-- Streaming output will go here -->
+            </div>
+        </div>
+
+        <script>
+            const form = document.querySelector("form");
+            const outputDiv = document.getElementById("output");
+        
+            form.addEventListener("submit", function (e) {
+                e.preventDefault();
+                outputDiv.innerHTML = "<p>Generating...</p>";
+        
+                fetch("/generate", {
+                    method: "POST",
+                    body: new FormData(form),
+                }).then(response => {
+                    const reader = response.body.getReader();
+                    const decoder = new TextDecoder("utf-8");
+        
+                    function readChunk() {
+                        reader.read().then(({ done, value }) => {
+                            if (done) {
+                                console.log("Stream complete");
+                                return;
+                            }
+                            const chunk = decoder.decode(value, { stream: true });
+                            console.log("Chunk received:", chunk); // Debug: Log each chunk
+                            outputDiv.innerHTML += chunk; // Append the chunk to the output
+                            readChunk(); // Continue reading
+                        });
+                    }
+        
+                    readChunk();
+                }).catch(error => {
+                    console.error("Error fetching data:", error);
+                    outputDiv.innerHTML = "<p>Error generating recipe. Please try again.</p>";
+                });
+            });
+        </script>
+    </body>
+</html>

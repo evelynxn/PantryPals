@@ -1,0 +1,359 @@
+body {
+    background-color: #eedac3;
+    color: #4c2615;
+
+}
+header{
+    font-family: Trebuchet MS, sans-serif;
+    margin: 0 auto;
+    margin-top: 50px;
+    color: #4c2615;
+    margin-bottom: 50px;
+
+}
+.nav {
+    display: flex; /* Use Flexbox for layout */
+    justify-content: center; /* Center the links horizontally */
+    align-items: center; /* Align items vertically */
+    position: relative; /* Allows positioning of the logo */
+}
+
+.pages {
+    background-color: #a2c590;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex; /* Use Flexbox for layout */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    width: fit-content; /* Adjust width to fit content */
+    margin-left: -2px; /* Move closer to the image */
+    border: 2px solid rgb(3, 42, 3);
+    box-shadow: 10px 10px;
+}
+ 
+.nav img {
+    position: absolute; /* Position the logo */
+    left: 10px; /* Align the logo to the far left */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for vertical centering */
+    height: 80px; /* Adjust size as needed */
+}
+
+/* logo  */
+.nav img:hover {
+    filter: brightness(1.1);
+}
+
+.nav a {
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin: 0 10px; /* Add spacing between links */
+    text-decoration: none;
+    color: #4c2615;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.pages a:hover {
+    color: #eedac3;
+    background-color: #6f965b;
+}
+
+.userInput {
+    background-color: #a2c590;
+    flex: 1;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.userInput p {
+    background-color: #88b572;
+    padding: 10px 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+    color: #745547;
+    font-size: 20px;
+}
+
+.userInput input {
+    background-color: #6f965b;
+    border-radius: 10px;
+}
+
+.chatBox {
+    background-color: #eedac3;
+    border-radius: 15px;
+    flex: 1;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    margin: 20px;
+    height: 130vh;
+    padding: 15px;
+    width: 95%; /* Set a fixed width */
+    border: solid rgb(3, 42, 3);
+}
+
+.interface {
+    margin: 20px auto;
+    background-color: #a2c590;
+    padding: 15px;
+    width: 67%;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center;     /* Center horizontally */
+    border: 2px solid rgb(3, 42, 3);
+    box-shadow: 10px 10px;
+}
+/* this is for the recipe book */
+.book {
+    background-color: #a2c590;
+}
+/* this is for the contact page */
+.contact {
+    background-color: #a2c590;
+    margin: 20px auto;
+    width: 50%;
+    padding: 15px;
+    border-radius: 20px;
+    border-width: 4px;
+    text-align: center;
+    border: 2px solid rgb(3, 42, 3);
+    box-shadow: 10px 10px;
+}
+.contact p {
+    background-color: #769b64;
+    padding: 10px 10px;
+    border-radius: 10px;
+    color: #7a5443;
+    font-size: 20px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    justify-content: center; /* Align content to the center */
+    width: 80%;
+    margin: 0 auto; /* Center the paragraph itself */
+    border: 2px solid rgb(3, 42, 3)
+}
+
+h1 {
+    font-family:  Trebuchet MS, sans-serif
+  }
+
+label{
+    font-family: DejaVu Sans Mono, monospace;
+}
+p{
+    font-family: Didot, serif
+}
+
+/* Recommendations page styling */
+.container {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    padding-bottom: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+.food {
+    background-color:#a2c590;
+    border-radius: 25px;
+    box-shadow: 10px 10px;
+    border: 2px solid rgb(3, 42, 3);
+}
+
+.container div:hover{
+    transform:scale(1.1);
+    transition: transform 0.3s ease;
+
+}
+
+.container img{
+    border-radius: 25px;
+    padding: 10px;
+}
+
+figcaption {
+    text-align: center;
+    font-size: 25px;
+    padding-bottom: 10px;
+}
+.containers {
+    display: flex;
+    gap: 2%;
+    flex-wrap: wrap;
+    align-content: start;
+    margin: 10px;
+    margin-top: 10px;
+    font-family: 'Trebuchet MS', sans-serif;
+    
+}
+
+.item {
+    margin: 5px; /* Add margin to create spacing between boxes */
+    padding: 15px;
+    border-radius: 15px;
+    border: solid rgb(3, 42, 3);
+    text-align: center;
+    background-color: #a2c590;
+    border: 2px solid rgb(3, 42, 3);
+    box-shadow: 10px 10px;
+
+}
+
+.item:nth-child(1) {
+    background-color: #aadaa0;
+    width: 100%;
+    height: 5%;
+}
+
+.item:nth-child(2) {
+    background-color: #9dc08c;
+    width: 30%;
+    height: 75%;
+    margin-top: 20px;
+    
+}
+
+.item:nth-child(3) {
+    background-color: #8fc499;
+    height: auto; /* Allow height to adjust */
+    width: 60.8%; /* Fix the width */
+    margin-top: 20px;
+
+}
+/* Updated .devs container styling */
+.devs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Creates 2 equal-width columns */
+    grid-template-rows: repeat(2, auto);   /* Creates 2 rows with automatic height */
+    gap: 20px; /* Adjusts the spacing between grid items */
+    padding: 20px;
+    max-width: 800px; /* Optional: limits the width of the grid container */
+    margin: 0 auto;   /* Centers the grid container */
+    justify-items: center; /* Centers the flip cards horizontally */
+    align-items: center; /* Centers the flip cards vertically */
+    padding-bottom: 40px;
+
+}
+
+/* Flip card styling */
+.flip-card {
+    background-color: transparent;
+    width: 100%;
+    max-width: 180px; /* Adjusts the size of the flip cards */
+    aspect-ratio: 3 / 4;
+    /* border: 1px solid #f1f1f1; */
+    perspective: 1000px; /* Enables the 3D effect */
+    margin: 10px;
+    flex: 1 1 160px;
+}
+
+/* Flip card inner container */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* Flip card hover effect */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Flip card front and back styling */
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+
+/* Front side styling */
+.flip-card-front {
+    background-color: #bbb;
+    color: black;
+}
+
+/* Back side styling */
+.flip-card-back {
+    padding-top: 20px;
+    background-color: #11674a;
+    color: white;
+    transform: rotateY(180deg);
+    border-radius: 10px;
+}
+  
+.people {
+    background-color: #eedac3; /* Light gray background */
+    border: 2px solid #745547;    /* Gray border */
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+  
+.people img {
+    width: 100%;
+    height: auto;
+    max-width: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: 2px solid #745547;
+}
+
+.shortcut {
+    box-shadow: inset 0 0 0 0 #6f965b;
+    color: #4c2615;
+    padding: 0 .25rem;
+    margin: 0 -.25rem;
+    transition: color .5s ease-in-out, box-shadow .3s ease-in-out;
+    text-decoration: none;
+    background-color: #eedac3;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: 2px solid rgb(3, 42, 3);
+}
+
+.shortcut:hover {
+    color: #fff;
+    box-shadow: inset 200px 0 0 0 #6f965b;
+}
+.cookingGuy{
+    padding-bottom: 10px;
+}
+.cookingGuy img{
+    width: 30%;
+    height: auto;
+}
+.backToTop {
+    background-color: #a2c590; /* Retro Burnt Orange */
+    color: rgb(8, 2, 2);
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    border: 3px solid #11674a; /* Dark Brown Border */
+    box-shadow: 3px 3px 0px rgb(8, 2, 2);
+    text-transform: uppercase;
+    display: block;
+    width: fit-content; /* Makes the button only as wide as the text */
+    height: fit-content;
+    position: fixed; /* Makes the button sticky */
+    bottom: 20px; /* Position from the bottom of the viewport */
+    left: 20px; /* Position from the left of the viewport */
+}
+
+.backToTop:hover{
+    background-color: #85a774;
+}
